@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:movieapp/styles/textstyle.dart';
 
-class SearchPage extends StatelessWidget {
+class SearchPage extends StatefulWidget {
   SearchPage({super.key});
 
+  @override
+  State<SearchPage> createState() => _SearchPageState();
+}
+
+class _SearchPageState extends State<SearchPage> {
+  List navigateToPages = [
+
+  ];
+  void _onTapedFunction(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+  int _selectedIndex = 1;
   List recentSearch = [
     'marvel',
     'captain america',
@@ -13,6 +27,7 @@ class SearchPage extends StatelessWidget {
     'npcb',
     'dulquer salman'
   ];
+
   List popularMovies = [
     'assets/images/English/Trolls.jpg',
     'assets/images/English/Run-Rabbit-Run.jpg',
@@ -23,6 +38,7 @@ class SearchPage extends StatelessWidget {
     'assets/images/English/Sanctuary.jpg',
     'assets/images/English/Wonka.jpg',
   ];
+
   List malayalamMovies = [
     'assets/images/Malayalam/Higuita.jpg',
     'assets/images/Malayalam/iratta.jpg',
@@ -38,6 +54,7 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Color(0xFF24223A),
       body: CustomScrollView(
@@ -201,7 +218,26 @@ class SearchPage extends StatelessWidget {
             ),
           ),
         ],
+
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color(0xFF24223A),
+
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.lightBlueAccent,
+        unselectedItemColor: Colors.grey,
+        onTap: _onTapedFunction,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search),label: 'search'),
+          BottomNavigationBarItem(icon: Icon(Icons.save),label: 'Saved'),
+          BottomNavigationBarItem(icon: Icon(Icons.download),label: 'Downloads'),
+          BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Account'),
+        ],
       ),
     );
   }
+
+
 }
