@@ -18,6 +18,7 @@ class _SearchPageState extends State<SearchPage> {
     });
   }
   int _selectedIndex = 1;
+
   List recentSearch = [
     'marvel',
     'captain america',
@@ -97,7 +98,7 @@ class _SearchPageState extends State<SearchPage> {
                       alignment: Alignment.topLeft,
                       child: Text(
                         'Recent Searches',
-                        style: CustomeTextStyles.headingStyle,
+                        style: CustomTextStyles.headingStyle,
                       ),
                     ),
                   ),
@@ -146,7 +147,7 @@ class _SearchPageState extends State<SearchPage> {
                     alignment: Alignment.topLeft,
                     child: Text('Popular',
                         style:
-                            CustomeTextStyles.headingStyle.merge(TextStyle())),
+                            CustomTextStyles.headingStyle.merge(TextStyle())),
                   )
                   //for additional styling along with the defined styles in the textstyle.dart file that i created
                 ],
@@ -186,7 +187,7 @@ class _SearchPageState extends State<SearchPage> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 25.0, top: 25, bottom: 10),
                 child: Text('Malyalam',
-                    style: CustomeTextStyles.headingStyle.merge(TextStyle())),
+                    style: CustomTextStyles.headingStyle.merge(TextStyle())),
               ),
             ),
           ),
@@ -223,7 +224,6 @@ class _SearchPageState extends State<SearchPage> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color(0xFF24223A),
-
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.lightBlueAccent,
         unselectedItemColor: Colors.grey,

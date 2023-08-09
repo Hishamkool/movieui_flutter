@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 
-class CustomeTextStyles {
+class CustomTextStyles {
   static const TextStyle commonTextStyle =  TextStyle(
     color: Colors.white,
 
