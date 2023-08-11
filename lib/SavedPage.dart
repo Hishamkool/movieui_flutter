@@ -2,13 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/styles/textstyle.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: MovieAppSavedPage(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
-
 class MovieAppSavedPage extends StatelessWidget {
   List _savedMoviePoster = [
     'assets/images/saved/Captain-America-The-Winter-Soldier.jpg',
@@ -135,7 +128,13 @@ class MovieAppSavedPage extends StatelessWidget {
                       Spacer(),
                       Align(
                           alignment: Alignment.topRight,
-                          child: IconButton(onPressed: () {  }, icon: Icon(Icons.more_vert,color: Colors.white,),))
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.more_vert,
+                              color: Colors.white,
+                            ),
+                          ))
                     ],
                   )),
             );

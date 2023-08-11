@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movieapp/SavedPage.dart';
 import 'package:movieapp/styles/textstyle.dart';
 
 class SearchPage extends StatefulWidget {
@@ -9,15 +10,37 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  List navigateToPages = [
-
-  ];
-  void _onTapedFunction(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-  int _selectedIndex = 1;
+  // List navigateToPages = [
+  //   Center(
+  //     child: Card(
+  //       child: Text('Home Page under development'),
+  //     ),
+  //   ),
+  //   Center(
+  //     child: Card(
+  //       child: Text('Search Page under development'),
+  //     ),
+  //   ),
+  //   MovieAppSavedPage(),
+  //   Center(
+  //     child: Card(
+  //       child: Text('Downloads Page under development'),
+  //     ),
+  //   ),
+  //   Center(
+  //     child: Card(
+  //       child: Text('Account Page under development'),
+  //     ),
+  //   ),
+  // ];
+  //
+  // void _onTapedFunction(int index) {
+  //   setState(() {
+  //     _selectedIndex = index;
+  //   });
+  // }
+  //
+  // int _selectedIndex = 1;
 
   List recentSearch = [
     'marvel',
@@ -55,7 +78,6 @@ class _SearchPageState extends State<SearchPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Color(0xFF24223A),
       body: CustomScrollView(
@@ -219,25 +241,23 @@ class _SearchPageState extends State<SearchPage> {
             ),
           ),
         ],
-
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFF24223A),
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.lightBlueAccent,
-        unselectedItemColor: Colors.grey,
-        onTap: _onTapedFunction,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.search),label: 'search'),
-          BottomNavigationBarItem(icon: Icon(Icons.save),label: 'Saved'),
-          BottomNavigationBarItem(icon: Icon(Icons.download),label: 'Downloads'),
-          BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Account'),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   type: BottomNavigationBarType.fixed,
+      //   backgroundColor: Color(0xFF24223A),
+      //   currentIndex: _selectedIndex,
+      //   selectedItemColor: Colors.lightBlueAccent,
+      //   unselectedItemColor: Colors.grey,
+      //   onTap: _onTapedFunction,
+      //   items: [
+      //     BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.save), label: 'Saved'),
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.download), label: 'Downloads'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
+      //   ],
+      // ),
     );
   }
-
-
 }
