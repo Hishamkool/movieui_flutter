@@ -40,7 +40,9 @@ class MovieAppSavedPage extends StatelessWidget {
           ),
           actions: [
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+
+                },
                 child: Center(
                     child: Text(
                   "Delete",
@@ -51,92 +53,91 @@ class MovieAppSavedPage extends StatelessWidget {
         body: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
-              // decoration: BoxDecoration(
-              //   border: Border.all(color: Colors.black, width: 5),
-              //   // color: Colors.blue,
-              // ),
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              height: 190,
-              child: Card(
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+              decoration: BoxDecoration(
                   color: Color(0xFF312E54),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Row(
-                    children: [
-                      //Image
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Container(
-                            height: 162,
-                            width: 150,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                image: AssetImage(_savedMoviePoster[index]),
-                                fit: BoxFit.cover,
-                              ),
-                            )),
-                      ),
-                      //Title
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 15.0, vertical: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              _savedMovieTitles[index],
-                              style: CustomTextStyles.headingStyle
-                                  .merge(TextStyle(fontSize: 16)),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              _savedMovieGener[index],
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Container(
-                              height: 85,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              padding:
-                                  const EdgeInsets.only(top: 48.0, left: 50),
-                              child: TextButton(
-                                  style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(
-                                              Colors.red)),
-                                  onPressed: () {},
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      'Watch Now',
-                                      style: TextStyle(
-                                          fontSize: 18, color: Colors.white),
-                                    ),
-                                  )),
-                            ),
-                          ],
+                  // border: Border.all(width: 1, color: Colors.black),
+                  borderRadius: BorderRadius.circular(20)),
+              height: 190,
+              child: Row(
+                children: [
+                  //Image
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                        height: 162,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                            image: AssetImage(_savedMoviePoster[index]),
+                            fit: BoxFit.cover,
+                          ),
+                        )),
+                  ),
+                  //Title
+                  Container(
+                    width: 200,
+                    padding: const EdgeInsets.only(left: 15.0, top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Wrap(children: [
+                          Text(
+                            _savedMovieTitles[index],
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                          ),
+                        ]),
+                        SizedBox(
+                          height: 10,
                         ),
-                      ),
+                        Text(
+                          _savedMovieGener[index],
+                          style: TextStyle(color: Colors.grey, fontSize: 10),
+                        ),
+                        Container(
+                          height: 85,
+                          width: 150,
 
-                      //trailingIcon
-                      Spacer(),
-                      Align(
-                          alignment: Alignment.topRight,
-                          child: IconButton(
+                          padding: const EdgeInsets.only(top: 48.0, left: 20),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(backgroundColor: Colors.red,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
                             onPressed: () {},
-                            icon: Icon(
-                              Icons.more_vert,
-                              color: Colors.white,
-                            ),
-                          ))
-                    ],
-                  )),
+                            child: Text('Watch Now'),
+                          ),
+                          // child: TextButton(
+                          //     style: ButtonStyle(
+                          //         backgroundColor:
+                          //             MaterialStateProperty.all(Colors.red)),
+                          //     onPressed: () {},
+                          //     child: Padding(
+                          //       padding: const EdgeInsets.all(8.0),
+                          //       child: Text(
+                          //         'Watch Now',
+                          //         style: TextStyle(
+                          //             fontSize: 18, color: Colors.white),
+                          //       ),
+                          //     )),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  //trailingIcon
+                  Spacer(),
+                  Align(
+                      alignment: Alignment.topRight,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.more_vert,
+                          color: Colors.white,
+                        ),
+                      ))
+                ],
+              ),
             );
           },
           itemCount: _savedMovieTitles.length,
