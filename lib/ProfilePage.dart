@@ -74,52 +74,54 @@ class MovieappProfilePage extends StatelessWidget {
             ),
 
             //icons below profile
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              margin: EdgeInsets.only(left: 10, right: 10, top: 45),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0x400d0b25)),
-              // height: 100,
-              height: MediaQuery.of(context).size.height * 0.60,
-              width: MediaQuery.of(context).size.width * 0.1,
-              child: Column(
-                children: [
-                  scrollContainer(
-                    leadingIcon: Icons.person_2_outlined,
-                    listTitle: 'My profile',
-                  ),
-                  // SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.notifications_none,
-                    listTitle: 'Notifications',
-                  ),
-                  // SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.history,
-                    listTitle: 'history',
-                  ),
-                  // SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.subscriptions_outlined,
-                    listTitle: 'Subscriptions',
-                  ),
-                  // SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.settings,
-                    listTitle: 'Settings',
-                  ),
-                  // SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.help_outline,
-                    listTitle: 'Help',
-                  ),
-                  scrollContainer(
-                    leadingIcon: Icons.logout,
-                    listTitle: 'Logout',
-                  ),
-                  // SizedBox(height: 10,),
-                ],
+            IntrinsicHeight(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                margin: EdgeInsets.only(left: 10, right: 10, top: 45),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0x400d0b25)),
+                // height: 100,
+                // height: MediaQuery.of(context).size.height * 0.60,
+                width: MediaQuery.of(context).size.width * 0.1,
+                child: Column(
+                  children: [
+                    scrollContainer(
+                      leadingIcon: Icons.person_2_outlined,
+                      listTitle: 'My profile',
+                    ),
+                    // SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.notifications_none,
+                      listTitle: 'Notifications',
+                    ),
+                    // SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.history,
+                      listTitle: 'history',
+                    ),
+                    // SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.subscriptions_outlined,
+                      listTitle: 'Subscriptions',
+                    ),
+                    // SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.settings,
+                      listTitle: 'Settings',
+                    ),
+                    // SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.help_outline,
+                      listTitle: 'Help',
+                    ),
+                    scrollContainer(
+                      leadingIcon: Icons.logout,
+                      listTitle: 'Logout',
+                    ),
+                    // SizedBox(height: 10,),
+                  ],
+                ),
               ),
             ),
           ],
