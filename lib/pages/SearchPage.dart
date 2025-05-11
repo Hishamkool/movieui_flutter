@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movieapp/SavedPage.dart';
+import 'package:movieapp/pages/SavedPage.dart';
 import 'package:movieapp/styles/textstyle.dart';
 
 class SearchPage extends StatefulWidget {
@@ -79,7 +79,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF24223A),
+      backgroundColor: const Color(0xFF24223A),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(

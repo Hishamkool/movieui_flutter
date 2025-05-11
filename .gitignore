@@ -1,44 +1,86 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-migrate_working_dir/
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
+# Android
+/android/gradle-wrapper.jar
+/android/.gradle/
+/android/local.properties
+/android/**/build/
+/android/**/.cxx/
+/android/app/debug.keystore
+/android/key.properties
+/android/app/profile/
+/android/app/release/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# iOS
+/ios/**/Pods/
+/ios/**/.symlinks/
+/ios/**/Flutter/Flutter.podspec
+/ios/**/Flutter/Flutter.framework
+/ios/**/Flutter/app.flx
+/ios/**/Flutter/app.zip
+/ios/**/Flutter/flutter_assets/
+/ios/**/Flutter/flutter_export_environment.sh
+/ios/**/.generated/
+/ios/**/Flutter/Generated.xcconfig
+/ios/**/Flutter/app.flx
+/ios/**/Debug.xcconfig
+/ios/**/Release.xcconfig
+/ios/**/Profile.xcconfig
+/ios/Flutter/.last_build_id
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
+# Flutter
+/.dart_tool/
+/.flutter-plugins
+/.flutter-plugins-dependencies
+/.packages
 .pub-cache/
 .pub/
 /build/
+/fvm/
+**/doc/api/
 
-# Symbolication related
+# Platform-specific generated files
+/linux/flutter/generated_plugin_registrant.*
+/linux/flutter/generated_plugins.cmake
+/macos/Flutter/GeneratedPluginRegistrant.swift
+/windows/flutter/generated_plugin_registrant.*
+/windows/flutter/generated_plugins.cmake
+
+# Debug/Release artifacts
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# IDE & Editor-specific files
+.vscode/  # Uncomment if you don't want to share VS Code settings
+.idea/
+*.iml
+*.ipr
+*.iws
+.atom/
+.buildlog/
+.history/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Environment & config files
+.env
+.env.local
+.env.*.local
+.flutter_settings
+
+# Miscellaneous
+*.log
+*.lock
+*.pyc
+*.class
+*.ktmeta
+*.keystore
+*.jks
+*.p12
+*.key
+*.cer
+migrate_working_dir/
+.svn/

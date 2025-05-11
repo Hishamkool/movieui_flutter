@@ -105,7 +105,7 @@ class MovieAppSavedPage extends StatelessWidget {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(backgroundColor: Colors.red,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
                             onPressed: () {},
-                            child: Text('Watch Now'),
+                            child: const Text('Watch Now',style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                           ),
                           // child: TextButton(
                           //     style: ButtonStyle(
